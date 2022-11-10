@@ -16,6 +16,11 @@
 
 </html>
 <script>
+
+    var ta0 = 0
+    var ta1 = 0
+    var ta2 = 0
+
     var cavalos = [
         { nome: "Cavalo1", tempo: [], tempoACUMULADO: '' },
         { nome: "Cavalo2", tempo: [], tempoACUMULADO: '' },
@@ -28,13 +33,26 @@
         for (var cavalo = 0; cavalo < cavalos.length; cavalo++) {
 
             for (var volta = 0; volta < 7; volta++) {
+                var atual = 7 + Math.random() * (9-7)
+                cavalos[cavalo].tempo.push(atual)
 
-                cavalos[cavalo].tempo.push(7 + Math.random() * (9-7))
+                if(cavalo == 0) {
+                    ta0 += atual
+                } else
 
-                div_resultado.innerHTML += `${cavalos[0].nome} – ${cavalos[0].tempo[volta]} – ${} – Cavalo02 – x,xx – yy,yy - Cavalo03 – x,xx – yy,yy `
+                if(cavalo == 1) {
+                    ta1 += atual
+                } else
+
+                if(cavalo == 2) {
+                    ta2 += atual
+                }
+
+                div_resultado.innerHTML += `${cavalos[0].nome} – ${cavalos[0].tempo[volta]} – ${ta0} – ${cavalos[0].nome} – ${cavalos[1].tempo[volta]} – ${ta1} - ${cavalos[2].nome} – ${cavalos[2].tempo[volta]} – ${ta2 } `
 
             }
             
+        
         }
 
     }
