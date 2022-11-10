@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Turfe amigo</h1>
     <button onclick="exibir()">Dar a largada</button><br>
     <div id="div_resultado"></div>
 </body>
+
 </html>
 <script>
     var cavalos = [
-        {nome: "Cavalo1", tempo: "", tempoACUMULADO: ""},
-        {nome: "Cavalo2", tempo: "", tempoACUMULADO: ""},
-        {nome: "Cavalo3", tempo: "", tempoACUMULADO: ""}
+        { nome: "Cavalo1", tempo: [], tempoACUMULADO: '' },
+        { nome: "Cavalo2", tempo: [], tempoACUMULADO: '' },
+        { nome: "Cavalo3", tempo: [], tempoACUMULADO: ''}
     ]
-
-    var tempoACUMULADO1 = ""
-    var tempoACUMULADO2 = ""
-    var tempoACUMULADO3 = ""
-
     function exibir() {
- 
+
         div_resultado.innerHTML = ''
 
-        for (let cavalo = 0; cavalo < cavalos.length; cavalo++) {
+        for (var cavalo = 0; cavalo < cavalos.length; cavalo++) {
 
-        
+            for (var volta = 0; volta < 7; volta++) {
 
-        for (let voltas = 0; voltas < 7; voltas++) {
-            var atual = cavalos[voltas];
+                var tempo1 = 7 + Math.random() * (9 - 7)
+                var tempo2 = 7 + Math.random() * (9 - 7)
+                var tempo3 = 7 + Math.random() * (9 - 7)
+                var total =  tempo1 + tempo2 + tempo3
+                // ARRUMAR ISSO
+                cavalos.tempo.push(tempo1)
+                cavalos.tempo.push(tempo1)
+                cavalos.tempo.push(tempo1)
 
-            parseInt(7 + Math.random() * (9-7))
-            cavalos.push[voltas]
+                div_resultado.innerHTML += `${cavalos.nome} – ${cavalos.tempo} – ${} – Cavalo02 – x,xx – yy,yy - Cavalo03 – x,xx – yy,yy `
 
-            
+            }
 
-            
         }
-
-    }
 
     }
 </script>
