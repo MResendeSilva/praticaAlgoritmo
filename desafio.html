@@ -17,9 +17,9 @@
 </html>
 <script>
     var cavalos = [
-        { nome: "Cavalo1", tempo1: [], tempoACUMULADO: '' },
-        { nome: "Cavalo2", tempo2: [], tempoACUMULADO: '' },
-        { nome: "Cavalo3", tempo3: [], tempoACUMULADO: ''}
+        { nome: "Cavalo1", tempo: [], tempoACUMULADO: '' },
+        { nome: "Cavalo2", tempo: [], tempoACUMULADO: '' },
+        { nome: "Cavalo3", tempo: [], tempoACUMULADO: ''}
     ]
     function exibir() {
 
@@ -29,19 +29,12 @@
 
             for (var volta = 0; volta < 7; volta++) {
 
-                var tempo1 = 7 + Math.random() * (9 - 7)
-                var tempo2 = 7 + Math.random() * (9 - 7)
-                var tempo3 = 7 + Math.random() * (9 - 7)
-                var total =  tempo1 + tempo2 + tempo3
-                // ARRUMAR ISSO
-                cavalos.push[tempo1]
-                cavalos.push[tempo2]
-                cavalos.push[tempo3]
+                cavalos[cavalo].tempo.push(7 + Math.random() * (9-7))
 
-                div_resultado.innerHTML += `${cavalos.nome} – ${cavalos.tempo} – ${total} – Cavalo02 – x,xx – yy,yy - Cavalo03 – x,xx – yy,yy `
+                div_resultado.innerHTML += `${cavalos[0].nome} – ${cavalos[0].tempo[volta]} – ${} – Cavalo02 – x,xx – yy,yy - Cavalo03 – x,xx – yy,yy `
 
             }
-
+            
         }
 
     }
